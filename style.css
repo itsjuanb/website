@@ -1,10 +1,10 @@
 body {
-font-family: 'Arial', sans-serif;
+font-family: 'Times New Roman', sans-serif;
 margin: 20px;
 
 
 header {
-background-color: blue;
+background-color: orange;
 color:blue
 text-align: center;
 padding: 10px;
@@ -17,5 +17,5 @@ main {
 footer {
     margin-top: 20px;
     text-align: center;
-    color: #2100f7;
+    color: #eb7d34;
 }
