@@ -305,7 +305,7 @@ main {
 
 .lore-item {
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
     align-items: start;
     padding: 18px;
@@ -329,7 +329,7 @@ main {
 }
 
 .lore-tag {
-    grid-column: 2;
+    grid-column: 1;
     justify-self: start;
     padding: 3px 6px;
     background: var(--yellow);
@@ -465,9 +465,10 @@ body.secret-mode #logo {
     }
 
     .lore-item {
-        grid-template-columns: 38px 1fr;
+        grid-template-columns: minmax(0, 1fr);
         padding: 12px;
     }
+
 
     .guestbook-note {
         align-items: flex-start;
