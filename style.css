@@ -586,3 +586,31 @@ body.secret-mode #logo {
         font-size: 2.5rem;
     }
 }
+
+
+/* width */
+.lore-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-width: 0;
+}
+
+.lore-item > div {
+    display: block;
+    width: 100%;
+    min-width: 0;
+}
+
+.anole-scoreboard {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.anole-progress {
+    width: 100%;
+    box-sizing: border-box;
+}
