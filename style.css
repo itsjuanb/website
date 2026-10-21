@@ -585,3 +585,22 @@ body.secret-mode #logo {
         font-size: 2.5rem;
     }
 }
+
+
+.lore-item {
+    grid-template-columns: 50px minmax(0, 1fr);
+}
+
+.lore-item > div {
+    min-width: 0;
+    width: 100%;
+}
+
+.lore-item p,
+.lore-item h3 {
+    width: auto;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
