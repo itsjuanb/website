@@ -4,7 +4,7 @@ const logo = document.querySelector("#logo");
 const backToTop = document.querySelector("#back-to-top");
 
 const buttonMessages = [
-    "wow. you pressed the BUTTON? what a surprise! (no.)",
+    "Good heavens! You have, perchance, engaged with that most remarkable of mechanisms—the button, as it is commonly denominated? What an utterly unforeseen turn of events! (Alas, it is not.)",
     "welcome to x-plane 12! you're in a multi hour flight. you're about to finish-OH-ctd.",
     "-> pipis.",
     "my favorite color is orange. could you tell???",
