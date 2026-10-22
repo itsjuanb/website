@@ -43,7 +43,7 @@ logo.addEventListener("click", () => {
     if (document.body.classList.contains("secret-mode")) {
         logo.title = "You have made a terrible discovery.";
         buttonResult.textContent =
-            "SECRET MODE ACTIVATED. THE ORANGE HAS BECOME UNSTABLE.";
+            "welcome to secret mode!! as you can see, I'M STILL WORKING on it so all you get right now is red background and a dancing logo..";
     } else {
         logo.title = "itsjuanb";
         buttonResult.textContent =
