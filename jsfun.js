@@ -1,6 +1,6 @@
 
 /* =========================================
-  the website 0.2o
+  the website 0.2
    ========================================= */
 
 const chaosButton = document.querySelector("#chaos-button");
