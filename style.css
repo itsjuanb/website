@@ -851,6 +851,10 @@ body.secret-mode .ticker-track {
     }
 }
 
+body.secret-mode {
+    animation: background-chaos 1.2s linear infinite !important;
+}
+
 @keyframes background-chaos {
     0%   { background-color: #ff7900; }
     20%  { background-color: #ff004c; }
