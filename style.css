@@ -443,8 +443,8 @@ body.secret-mode #logo {
 }
 
 @keyframes logo-chaos {
-    from { transform: rotate(-3deg) skewX(-4deg); }
-    to { transform: rotate(3deg) skewX(4deg); }
+    from { transform: rotate(-360deg) skewX(-4deg); }
+    to { transform: rotate(360deg) skewX(4deg); }
 }
 
 @media (max-width: 600px) {
