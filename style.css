@@ -856,10 +856,10 @@ body.secret-mode {
 }
 
 @keyframes background-chaos {
-    0%   { background-color: #ff7900; }
-    20%  { background-color: #ff004c; }
-    40%  { background-color: #8a00ff; }
-    60%  { background-color: #00e5ff; }
-    80%  { background-color: #39ff14; }
-    100% { background-color: #ff7900; }
+    0%   { background-color: #ff5f1f; }
+    20%  { background-color: #ffa500; }
+    40%  { background-color: #ec5800; }
+    60%  { background-color: #ff7518; }
+    80%  { background-color: #ff4433; }
+    100% { background-color: #ffffff; }
 }
