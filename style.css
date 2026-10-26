@@ -439,7 +439,7 @@ body.secret-mode .masthead {
 }
 
 body.secret-mode #logo {
-    animation: logo-chaos 0.35s infinite alternate;
+    animation: logo-chaos 0.35s infinite;
 }
 
 @keyframes logo-chaos {
