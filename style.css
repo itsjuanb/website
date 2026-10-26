@@ -750,7 +750,7 @@ body.secret-mode .social-link:hover {
 }
 
 body.secret-mode .ticker-track {
-    animation-duration: 12s;
+    animation-duration: 0.5s;
 }
 
 @keyframes corruption-flicker {
@@ -849,4 +849,13 @@ body.secret-mode .ticker-track {
         animation: none;
         transition: none;
     }
+}
+
+@keyframes background-chaos {
+    0%   { background-color: #ff7900; }
+    20%  { background-color: #ff004c; }
+    40%  { background-color: #8a00ff; }
+    60%  { background-color: #00e5ff; }
+    80%  { background-color: #39ff14; }
+    100% { background-color: #ff7900; }
 }
