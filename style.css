@@ -438,15 +438,6 @@ body.secret-mode .masthead {
     background-color: #ff3b30;
 }
 
-body.secret-mode #logo {
-    animation: logo-chaos 0.35s infinite;
-}
-
-@keyframes logo-chaos {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
 @media (max-width: 600px) {
     .top-warning span {
         display: block;
@@ -783,10 +774,10 @@ body.secret-mode .ticker-track {
 
 @keyframes logo-chaos {
     from {
-        transform: rotate(-3deg) skewX(-4deg);
+        transform: rotate(0deg);
     }
     to {
-        transform: rotate(3deg) skewX(4deg);
+        transform: rotate(360deg);
     }
 }
 
