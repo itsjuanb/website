@@ -132,7 +132,7 @@ const SECRET_MESSAGES = [
     },
     {
         title: "ANOMALY DETECTED",
-        text: "The fence has entered the chat."
+        text: "the fence has entered the chat. of course an anole escapes."
     },
     {
         title: "BACKGROUND PROCESS",
@@ -153,7 +153,7 @@ let tickerClicks = 0;
 let tickerResetTimer = null;
 
 function showSecretAlert(title, message, duration = 4200) {
-    // Replace the previous alert rather than stacking notifications.
+ 
     if (currentAlert) {
         currentAlert.remove();
         currentAlert = null;
@@ -238,13 +238,13 @@ function startSecretMode() {
     document.body.classList.add("secret-mode");
 
     if (logo) {
-        logo.title = "Secret mode active. Click to restore normality.";
+        logo.title = "secret mode engaged. click to restore order.";
         logo.setAttribute("aria-pressed", "true");
     }
 
     showSecretAlert(
         "JUAN-WEB-SYSTEMS :: INTEGRITY CHECK FAILED",
-        "Secret mode activated. Reality status: questionable.",
+        "Secret mode activated. enjoy the animations and colors for some reason (why is this secret?).",
         6000
     );
 
@@ -281,7 +281,7 @@ function stopSecretMode() {
 
     if (buttonResult) {
         buttonResult.textContent =
-            "Secret mode deactivated. We will speak of this to nobody.";
+            "secret mode deactivated. it's not even that secret more like OBVIOUS mode";
     }
 }
 
@@ -298,7 +298,7 @@ if (logo) {
     logo.setAttribute("tabindex", "0");
     logo.setAttribute("aria-label", "Toggle secret mode");
     logo.setAttribute("aria-pressed", "false");
-    logo.title = "itsjuanb — click to discover secret mode";
+    logo.title = "itsjuanb — this logo is TOTALLY not clickable";
 
     logo.addEventListener("click", toggleSecretMode);
 
@@ -328,7 +328,7 @@ if (ticker) {
 
             showSecretAlert(
                 "HIDDEN COMMAND ACCEPTED",
-                "You have discovered the ticker interaction. You should probably investigate nothing further.",
+                "you have discovered the most random s*** ever. the ticker interaction. Your beedfack has been sent to the team!.",
                 6000
             );
 
@@ -357,3 +357,222 @@ if (backToTop) {
         });
     });
 }
+
+
+/* terminal */
+
+let pipisTerminal = null;
+let terminalInput = null;
+let terminalOutput = null;
+let terminalBuffer = "";
+let terminalHistory = [];
+
+function terminalPrint(message, className = "") {
+    if (!terminalOutput) return;
+
+    const line = document.createElement("div");
+    line.className = "terminal-line";
+
+    if (className) {
+        line.classList.add(className);
+    }
+
+    line.textContent = message;
+    terminalOutput.appendChild(line);
+    terminalOutput.scrollTop = terminalOutput.scrollHeight;
+}
+
+function openPipisTerminal() {
+    if (!secretModeActive || pipisTerminal) return;
+
+    pipisTerminal = document.createElement("section");
+    pipisTerminal.id = "pipis-terminal";
+    pipisTerminal.setAttribute("role", "dialog");
+    pipisTerminal.setAttribute("aria-label", "JUAN-WEB-SYSTEMS terminal");
+
+    pipisTerminal.innerHTML = `
+        <div class="terminal-header">
+            <span>JUAN-WEB-SYSTEMS :: TERMINAL</span>
+            <button type="button" id="terminal-exit" aria-label="Close terminal">×</button>
+        </div>
+        <div class="terminal-banner">
+     ██╗██╗   ██╗ █████╗ ███╗   ██╗
+     ██║██║   ██║██╔══██╗████╗  ██║
+     ██║██║   ██║███████║██╔██╗ ██║
+██   ██║╚██╗ ██╔╝██╔══██║██║╚██╗██║
+╚█████╔╝ ╚████╔╝ ██║  ██║██║ ╚████║
+ ╚════╝   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝
+        </div>
+        <div class="terminal-output" aria-live="polite"></div>
+        <form class="terminal-form">
+            <label for="terminal-input">orangepps@juan-web:~$</label>
+            <input id="terminal-input" type="text"
+                autocomplete="off" autocapitalize="off"
+                spellcheck="false" aria-label="Terminal command">
+        </form>
+        <div class="terminal-footer">welcome to fun???</div>
+    `;
+
+    document.body.appendChild(pipisTerminal);
+
+    terminalOutput = pipisTerminal.querySelector(".terminal-output");
+    terminalInput = pipisTerminal.querySelector("#terminal-input");
+
+    terminalPrint("JUAN-WEB-SYSTEMS [Version idk bro figure it out]");
+    terminalPrint("(c) 199X Power Of Pipis. All rights reserved.");
+    terminalPrint("Integrity check: running on a thread.");
+    terminalPrint('Type "help" to list available commands.');
+    terminalPrint("");
+
+    pipisTerminal.querySelector("#terminal-exit").addEventListener(
+        "click",
+        closePipisTerminal
+    );
+
+    pipisTerminal.querySelector(".terminal-form").addEventListener(
+        "submit",
+        event => {
+            event.preventDefault();
+
+            const command = terminalInput.value.trim();
+            if (!command) return;
+
+            terminalPrint(`pipis@juan-web:~$ ${command}`, "terminal-command");
+            terminalHistory.push(command);
+            runTerminalCommand(command);
+            terminalInput.value = "";
+        }
+    );
+
+    terminalInput.focus();
+}
+
+function closePipisTerminal() {
+    if (pipisTerminal) {
+        pipisTerminal.remove();
+    }
+
+    pipisTerminal = null;
+    terminalInput = null;
+    terminalOutput = null;
+    terminalHistory = [];
+}
+
+function runTerminalCommand(rawCommand) {
+    const command = rawCommand.toLowerCase().trim();
+
+    switch (command) {
+        case "help":
+            terminalPrint("AVAILABLE COMMANDS:");
+            terminalPrint("  help        list commands");
+            terminalPrint("  status      system status");
+            terminalPrint("  anole       anole saga scoreboard");
+            terminalPrint("  orange      activate Orange Protocol");
+            terminalPrint("  pipis       pipis subsystem diagnostics");
+            terminalPrint("  sudo ascend initiate ascenion cuz why not");
+            terminalPrint("  panic       make the kernel start panicking");
+            terminalPrint("  clear       clear terminal output");
+            terminalPrint("  exit        banish this terminal from existence");
+            break;
+
+        case "status":
+            terminalPrint("JUAN-WEB-SYSTEMS :: STATUS");
+            terminalPrint(`Secret Mode: ${secretModeActive ? "active: more like obvious mode" : "INACTIVE"}`);
+            terminalPrint("Website integrity: QUESTIONABLE");
+            terminalPrint("Orange level: beyond any form of notation.");
+            terminalPrint("Pipis subsystem: yes");
+            terminalPrint("Memory usage: ∞KB OK");
+            break;
+
+        case "anole":
+            terminalPrint("ANOLE SAGA :: OFFICIAL SCOREBOARD");
+            terminalPrint("anoles caught: 36 / 50");
+            terminalPrint("remaining: 14");
+            terminalPrint("total lizards: 39");
+            terminalPrint("gecko saga dlc: 3 /NaNinf");
+            terminalPrint("the fence... THE FENCE.");
+            break;
+
+        case "orange":
+            document.body.classList.add("orange-protocol");
+            terminalPrint("orange protocol started.");
+            terminalPrint("the website consumed orange.");
+            break;
+
+        case "pipis":
+            terminalPrint("-> pipis.");
+            terminalPrint("someone's special ????");
+            break;
+
+        case "sudo ascend":
+            terminalPrint("Checking permissions...");
+            terminalPrint("permission granted. you are the administrator of ???");
+            terminalPrint("ASCENDING...");
+            document.body.classList.add("terminal-ascending");
+            setTimeout(() => {
+                document.body.classList.remove("terminal-ascending");
+            }, 1600);
+            break;
+
+        case "panic":
+            terminalPrint("kernel panic: ----------------------------------------------------> pipis.");
+            terminalPrint("error: P1P13(forscaryeffect).3X3 NOT RESPONDING.");
+            terminalPrint("Suggested fix: ¯\_(ツ)_/¯.");
+            document.body.classList.add("terminal-panic");
+            setTimeout(() => {
+                document.body.classList.remove("terminal-panic");
+            }, 900);
+            break;
+
+        case "clear":
+            terminalOutput.replaceChildren();
+            break;
+
+        case "exit":
+            closePipisTerminal();
+            break;
+
+        default:
+            terminalPrint(`'${rawCommand}' is not recognized as a JUAN-WEB command.`);
+            terminalPrint('Type "help" for a list of commands.');
+    }
+
+    if (terminalOutput) {
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    }
+}
+
+document.addEventListener("keydown", event => {
+    if (!secretModeActive || pipisTerminal) return;
+
+    if (
+        event.ctrlKey || event.altKey || event.metaKey ||
+        event.target.matches("input, textarea, select, [contenteditable='true']")
+    ) {
+        return;
+    }
+
+    if (event.key.length === 1) {
+        terminalBuffer += event.key.toLowerCase();
+        terminalBuffer = terminalBuffer.slice(-5);
+
+        if (terminalBuffer === "pipis") {
+            terminalBuffer = "";
+            openPipisTerminal();
+        }
+    } else if (event.key === "Escape") {
+        terminalBuffer = "";
+    }
+});
+
+
+document.addEventListener("keydown", event => {
+    if (event.key !== "Escape") return;
+
+    if (pipisTerminal) {
+        closePipisTerminal();
+    } else if (secretModeActive) {
+        stopSecretMode();
+    }
+});
+
