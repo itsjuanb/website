@@ -221,21 +221,10 @@ footer {
     font-size: 0.8rem;
 }
 
-footer p {
-    margin: 0 0 14px;
-}
-
-footer a {
-    display: inline-block;
+.footer-code {
     color: var(--yellow);
-    font-weight: 700;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    font-size: 0.68rem;
 }
-
-footer a:hover {
-    color: var(--orange);
-
 
 @media (max-width: 600px) {
     header {
