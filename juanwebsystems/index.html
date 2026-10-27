@@ -1,27 +1,232 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>juan-web-systems</title>
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="juan-web-systems: just the facts">
+
+    <title>JUAN-WEB-SYSTEMS :: status</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+      
+        .feedback-panel {
+            margin-top: 30px;
+            padding: 28px;
+            background: #1b1b1b;
+            color: #f2f2f2;
+            border: 1px solid #353535;
+            border-top: 3px solid #ff7900;
+            border-radius: 12px;
+        }
+
+        .feedback-panel h2 {
+            margin: 0 0 12px;
+            color: #ff7900;
+            font-size: 1.6rem;
+            line-height: 1.3;
+        }
+
+        .feedback-panel p {
+            color: #d2d2d2;
+            line-height: 1.6;
+        }
+
+        .feedback-panel .section-label {
+            margin: 0 0 10px;
+            color: #ff9a3c;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        .feedback-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .feedback-form label {
+            color: #ff9a3c;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .feedback-form textarea {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 140px;
+            padding: 14px;
+            border: 1px solid #454545;
+            border-radius: 7px;
+            background: #111111;
+            color: #f2f2f2;
+            font: inherit;
+            line-height: 1.6;
+            resize: vertical;
+        }
+
+        .feedback-form textarea::placeholder {
+            color: #888888;
+        }
+
+        .feedback-form textarea:focus {
+            border-color: #ff7900;
+            outline: 2px solid rgba(255, 121, 0, 0.2);
+            outline-offset: 2px;
+        }
+
+        .feedback-note {
+            margin: 0;
+            color: #a3a3a3 !important;
+            font-size: 0.82rem;
+        }
+
+        .feedback-submit {
+            align-self: flex-start;
+            margin-top: 6px;
+            padding: 12px 18px;
+            border: 1px solid #ff7900;
+            border-radius: 6px;
+            background: #ff7900;
+            color: #111111;
+            font: inherit;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .feedback-submit:hover {
+            background: #ff9a3c;
+            border-color: #ff9a3c;
+        }
+
+        .feedback-submit:focus-visible {
+            outline: 2px solid #ffffff;
+            outline-offset: 4px;
+        }
+
+        
+        .feedback-trap {
+            position: absolute;
+            left: -10000px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 600px) {
+            .feedback-panel {
+                padding: 20px;
+            }
+
+            .feedback-submit {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <h1>welcome to JUAN-WEB-SYSTEMS!
-	</h1>
+        <h1>welcome to JUAN-WEB-SYSTEMS!</h1>
     </header>
-     <main>
-        <p>Yeah. Welcome to the new status page! Here I tell you what's up with the website.</p>
-		
-		 <p><strong>Latest major update (v0.3):</strong> I added and expanded functionality to secret mode, more fun things added there, find them out.</p>
-		<p></p>Oh yeah! I also added my socials there, but if alla that jazz is too inconvenient for you, you can send me a message below for feedback based on my website, only if you wanna.</p>
-		<p>The website works currently by the way. For now at least. Maybe I'll add a performance test feature here. who knows.</p>
-    </main>
-    <footer>
-        <p>&copy; 2027 itsjuanb. I reserve ALL of your rights. (This statement has no legal backing.) </p>
-		    <a href="../">Return to the WEBSITE →</a>
 
+    <main>
+        <p>
+            Yeah. Welcome to the new status page! Here I tell you
+            what's up with the website.
+        </p>
+
+        <p>
+            <strong>Latest major update (v0.3):</strong>
+            I added and expanded functionality to secret mode,
+            more fun things added there, find them out.
+        </p>
+
+        <p>
+            Oh yeah! I also added my socials there, but if alla that
+            jazz is too inconvenient for you, you can send me a
+            message below for feedback based on my website,
+            only if you wanna.
+        </p>
+
+        <p>
+            The website works currently by the way. For now at least.
+            Maybe I'll add a performance test feature here. who knows.
+        </p>
+
+        
+        <section class="feedback-panel" aria-labelledby="feedback-title">
+            <p class="section-label">communications 1</p>
+
+            <h2 id="feedback-title">Anonymous Feedback Terminal</h2>
+
+            <p>
+                Found a bug? Have feedback? Or just want to send me
+                a message? Go ahead. No name or email required.
+            </p>
+
+            <form
+                action="https://formspree.io/f/mdeeebnl"
+                method="POST"
+                class="feedback-form"
+            >
+                <label for="feedback-message">YOUR MESSAGE</label>
+
+                <textarea
+                    id="feedback-message"
+                    name="message"
+                    rows="6"
+                    maxlength="2000"
+                    required
+                    placeholder="Type your message here..."
+                    aria-describedby="feedback-note"
+                ></textarea>
+
+                <p id="feedback-note" class="feedback-note">
+                    max 2000 characters. BEST you don't include personal info.
+                </p>
+
+                <div class="feedback-trap" aria-hidden="true">
+                    <label for="feedback-website">
+                        Leave this field empty (el spam)
+                    </label>
+                    <input
+                        type="text"
+                        id="feedback-website"
+                        name="_gotcha"
+                        tabindex="-1"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="JUAN-WEB-SYSTEMS Anonymous Feedback"
+                >
+
+                <button type="submit" class="feedback-submit">
+                    SEND MESSAGE →
+                </button>
+            </form>
+        </section>
+=
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2027 itsjuanb. I reserve ALL of your rights.
+            (This statement has no legal backing.)
+        </p>
+
+        <a href="../">Return to the WEBSITE →</a>
     </footer>
 </body>
 </html>
