@@ -1,11 +1,10 @@
 body {
-font-family: 'Times New Roman', sans-serif;
+font-family: 'Helvetica', sans-serif;
 margin: 20px;
 
 
 header {
 background-color: orange;
-color:blue
 text-align: center;
 padding: 10px;
 }
