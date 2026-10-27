@@ -4,7 +4,7 @@ margin: 20px;
 }
 
 header {
-background-color: orange;
+background-color: orange; /* i just keep expanding on this website do i */
 text-align: center;
 padding: 10px;
 }
@@ -19,7 +19,107 @@ footer {
     color: #eb7d34;
 }
 
+
+/* el feedback */
+
+.feedback-panel {
+    margin-top: 30px;
+    padding: 20px;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid orange;
+    border-radius: 8px;
+}
+
+.feedback-panel h2 {
+    margin-top: 0;
+    color: #eb7d34;
+}
+
+.feedback-panel p {
+    color: #222222;
+}
+
+.feedback-panel .section-label {
+    color: #eb7d34;
+    font-weight: bold;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.feedback-form label {
+    color: #eb7d34;
+    font-weight: bold;
+}
+
 .feedback-form textarea {
-    background-color: #383838;
-    color: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 140px;
+    padding: 12px;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font: inherit;
+    resize: vertical;
+}
+
+.feedback-form textarea:focus {
+    border-color: orange;
+    outline: 2px solid #ffcc80;
+}
+
+.feedback-form textarea::placeholder {
+    color: #777777;
+}
+
+.feedback-note {
+    color: #666666 !important;
+    font-size: 0.85rem;
+}
+
+.feedback-submit {
+    align-self: flex-start;
+    padding: 12px 18px;
+    background: orange;
+    color: #000000;
+    border: 1px solid orange;
+    border-radius: 4px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.feedback-submit:hover {
+    background: #eb7d34;
+    border-color: #eb7d34;
+}
+
+.feedback-submit:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
+}
+
+.feedback-trap {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .feedback-panel {
+        padding: 14px;
+    }
+
+    .feedback-submit {
+        width: 100%;
+    }
 }
