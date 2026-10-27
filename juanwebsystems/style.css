@@ -1,7 +1,7 @@
 body {
 font-family: 'Helvetica', sans-serif;
 margin: 20px;
-
+}
 
 header {
 background-color: orange;
@@ -17,4 +17,9 @@ footer {
     margin-top: 20px;
     text-align: center;
     color: #eb7d34;
+}
+
+.feedback-form textarea {
+    background-color: #383838;
+    color: #ffffff;
 }
