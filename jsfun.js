@@ -554,7 +554,7 @@ document.addEventListener("keydown", event => {
 
     if (event.key.length === 1) {
         terminalBuffer += event.key.toLowerCase();
-        terminalBuffer = terminalBuffer.slice(-5);
+        terminalBuffer = terminalBuffer.slice(-7);
 
         if (terminalBuffer === "naranja") {
             terminalBuffer = "";
