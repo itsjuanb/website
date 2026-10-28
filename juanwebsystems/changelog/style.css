@@ -1,0 +1,145 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+
+
+:root {
+    --orange: #ff7900;                                                                                                                                                            /* STYLE UPDATE for web systems */
+    --hot-orange: #ff4d00;
+    --yellow: #ffe66d;
+    --ink: #19130e;
+    --paper: #fff4dc;
+    --white: #fffdf6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--orange);
+    color: var(--ink);
+    font-family: "Space Mono", "Courier New", monospace;
+    line-height: 1.6;
+}
+
+::selection {
+    background: var(--ink);
+    color: var(--yellow);
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+
+
+header {
+    padding: 35px 20px 24px;
+    text-align: center;
+    background:
+        radial-gradient(
+            circle,
+            rgba(25, 19, 14, 0.09) 1px,
+            transparent 1.5px
+        );
+    background-size: 13px 13px;
+    border-bottom: 5px solid var(--ink);
+}
+
+header::after {
+    content: "website ops // stats report";
+    display: block;
+    margin-top: 18px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+header h1 {
+    margin: 0;
+    font-family: "Arial Black", sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    text-transform: lowercase;
+    text-shadow: 3px 3px 0 var(--paper), 6px 6px 0 var(--ink);
+}
+
+
+
+main {
+    width: min(900px, calc(100% - 30px));
+    margin: 32px auto;
+    padding: clamp(22px, 5vw, 42px);
+    background: var(--paper);
+    border: 4px solid var(--ink);
+    box-shadow: 10px 10px 0 var(--ink);
+}
+
+main > p {
+    margin: 0 0 22px;
+}
+
+main > p strong {
+    color: var(--hot-orange);
+}
+
+
+
+
+footer {
+    margin-top: 55px;
+    padding: 25px 15px;
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-code {
+    color: var(--yellow);
+    font-size: 0.68rem;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 28px 15px 22px;
+    }
+
+    main {
+        padding: 20px 16px;
+        box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .feedback-panel {
+        padding: 16px;
+        box-shadow: 4px 4px 0 var(--orange);
+    }
+
+    .feedback-submit {
+        width: 100%;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .feedback-submit {
+        transition: none;
+    }
+}
