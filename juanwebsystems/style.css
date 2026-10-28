@@ -73,7 +73,7 @@ header h1 {
     font-size: clamp(2.5rem, 8vw, 5rem);
     line-height: 1.05;
     letter-spacing: -0.025em;
-    text-transform: uppercase;
+    text-transform: lowercase;
     text-shadow: 3px 3px 0 var(--paper), 6px 6px 0 var(--ink);
 }
 
