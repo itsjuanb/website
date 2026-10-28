@@ -59,7 +59,7 @@ header {
 }
 
 header::after {
-    content: "website ops // stats report";
+    content: "ALL of the updates: just the facts";
     display: block;
     margin-top: 18px;
     font-size: 0.72rem;
