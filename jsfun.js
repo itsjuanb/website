@@ -419,7 +419,7 @@ function openPipisTerminal() {
     terminalInput = pipisTerminal.querySelector("#terminal-input");
 
     terminalPrint("JUAN-WEB-SYSTEMS [Version idk bro figure it out]");
-    terminalPrint("(c) 199X Power Of Pipis. All rights reserved.");
+    terminalPrint("(c) 199X Power Of Naranja. All rights reserved.");
     terminalPrint("Integrity check: running on a thread.");
     terminalPrint('Type "help" to list available commands.');
     terminalPrint("");
@@ -480,7 +480,7 @@ function runTerminalCommand(rawCommand) {
             terminalPrint(`Secret Mode: ${secretModeActive ? "active: more like obvious mode" : "INACTIVE"}`);
             terminalPrint("Website integrity: QUESTIONABLE");
             terminalPrint("Orange level: beyond any form of notation.");
-            terminalPrint("Pipis subsystem: yes");
+            terminalPrint("ascension subsystem: yes");
             terminalPrint("Memory usage: ∞KB OK");
             break;
 
@@ -556,7 +556,7 @@ document.addEventListener("keydown", event => {
         terminalBuffer += event.key.toLowerCase();
         terminalBuffer = terminalBuffer.slice(-5);
 
-        if (terminalBuffer === "pipis") {
+        if (terminalBuffer === "naranja") {
             terminalBuffer = "";
             openPipisTerminal();
         }
