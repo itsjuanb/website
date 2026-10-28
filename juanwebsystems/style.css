@@ -59,7 +59,7 @@ header {
 }
 
 header::after {
-    content: "WEBSITE OPERATIONS // STATUS REPORT";
+    content: "website ops // stats report";
     display: block;
     margin-top: 18px;
     font-size: 0.72rem;
@@ -116,10 +116,9 @@ main > p strong {
 
 .feedback-panel h2 {
     margin: 0 0 18px;
-    font-family: Impact, "Arial Black", sans-serif;
+    font-family: "Arial Black", sans-serif;
     font-size: clamp(2rem, 6vw, 3.5rem);
     line-height: 1;
-    text-transform: uppercase;
 }
 
 .feedback-panel > p:not(.section-label) {
