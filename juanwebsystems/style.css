@@ -69,7 +69,7 @@ header::after {
 
 header h1 {
     margin: 0;
-    font-family: Impact, "Arial Black", sans-serif;
+    font-family: "Arial Black", sans-serif;
     font-size: clamp(2.5rem, 8vw, 5rem);
     line-height: 1.05;
     letter-spacing: -0.025em;
