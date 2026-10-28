@@ -405,7 +405,7 @@ function openPipisTerminal() {
         </div>
         <div class="terminal-output" aria-live="polite"></div>
         <form class="terminal-form">
-            <label for="terminal-input">orangepps@juan-web:~$</label>
+            <label for="terminal-input">naranjapps@juan-web:~$</label>
             <input id="terminal-input" type="text"
                 autocomplete="off" autocapitalize="off"
                 spellcheck="false" aria-label="Terminal command">
@@ -437,7 +437,7 @@ function openPipisTerminal() {
             const command = terminalInput.value.trim();
             if (!command) return;
 
-            terminalPrint(`pipis@juan-web:~$ ${command}`, "terminal-command");
+            terminalPrint(`naranjapps@juan-web:~$ ${command}`, "terminal-command");
             terminalHistory.push(command);
             runTerminalCommand(command);
             terminalInput.value = "";
